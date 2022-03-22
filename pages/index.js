@@ -6,14 +6,9 @@ import sausage from "../res/images/sausage.gif";
 
 export default function Home() {
   const { data: session } = useSession();
-  if (session) {
-    return (
-      <>
-        Signed in as {session.user.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
-  }
+  const sausageImage = {
+    objectFit: "contain",
+  };
 
   return (
     <div>
@@ -25,19 +20,30 @@ export default function Home() {
 
       <main className="center">
         <h1>SSO6</h1>
-        <div>
-          <Image src={sausage} alt="sausage logo" />
-          <Image src={sausage} alt="sausage logo" />
-          <Image src={sausage} alt="sausage logo" />
+        <div className="row">
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
         </div>
-        <>
-          Not signed in <br />
-          <button onClick={() => signIn()}>Sign in</button>
-        </>
-        <div>
-          <Image src={sausage} alt="sausage logo" />
-          <Image src={sausage} alt="sausage logo" />
-          <Image src={sausage} alt="sausage logo" />
+        {session ? (
+          <>
+            Signed in as {session.user.email} <br />
+            <button className="button" onClick={() => signOut()}>
+              Sign out
+            </button>
+          </>
+        ) : (
+          <>
+            Not signed in <br />
+            <button className="button" onClick={() => signIn()}>
+              Sign in
+            </button>
+          </>
+        )}
+        <div className="row">
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
+          <Image src={sausage} alt="sausage logo" {...sausageImage} />
         </div>
       </main>
 
