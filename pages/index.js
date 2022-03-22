@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main class="center">
+      <main className="center">
         <h1>SSO6</h1>
         <div>
           <Image src={sausage} alt="sausage logo" />
