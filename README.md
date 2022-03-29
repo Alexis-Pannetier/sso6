@@ -6,6 +6,10 @@ Test Single Sign-On auth
 
 https://sso6.herokuapp.com/
 
+Wait few seconds for load heroku website
+
+---
+
 ## Getting Started
 
 First, run the development server:
