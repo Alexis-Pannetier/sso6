@@ -47,3 +47,19 @@ a {
   display: flex;
   flex-direction: row;
 }
+
+.user-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.user-avatar {
+    display: block;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
