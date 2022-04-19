@@ -8,8 +8,9 @@ export default function Home() {
   const { data: session } = useSession();
   const sausageImage = {
     objectFit: "contain",
-    border: "1px solid white"
+    border: "1px solid white",
   };
+  console.log("session", session);
 
   return (
     <div>
@@ -27,17 +28,30 @@ export default function Home() {
           <Image src={sausage} alt="sausage logo" {...sausageImage} />
         </div>
         {session ? (
-            <>
-                <div className="user-details">
-                    <p>Signed in as { session.user.email }</p>
-                    <div className="user-avatar">
-                        <Image src={ session.user.image } height={50} width={50} objectFit="cover" alt="photo de profil"/>
-                    </div>
+          <>
+            <div className="user-details">
+              {session.user.image && (
+                <div className="user-avatar">
+                  <Image
+                    src={session.user.image}
+                    height={50}
+                    width={50}
+                    objectFit="cover"
+                    alt="photo de profil"
+                  />
                 </div>
-                <button className="button" onClick={() => signOut()}>
-                    Sign out
-                </button>
-            </>
+              )}
+              {session.user.name && (
+                <p>
+                  Signed in as <strong>{session.user.name}</strong>
+                </p>
+              )}
+              {session.user.email && <p>{session.user.email}</p>}
+            </div>
+            <button className="button" onClick={() => signOut()}>
+              Sign out
+            </button>
+          </>
         ) : (
           <>
             <button className="button" onClick={() => signIn()}>
