@@ -11,6 +11,7 @@ export default function App({
     <SessionProvider session={session}>
       <Head>
         <meta charSet="utf-8" />
+        <meta name="theme-color" content="#fede00" />
         <meta name="keywords" content="sso6, single, sign-on" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
