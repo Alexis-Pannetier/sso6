@@ -19,3 +19,29 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## t
+
+Working :
+
+- Battle.net
+- Discord
+- Facebook
+- Github
+- Gitlab
+- Google
+- Instagram
+- Linkedin
+- Reddit
+- Spotify
+- Twitch
+
+Do not working :
+
+- Apple (Need developer licence)
+- Atlassian
+- Github
+- Linkedin (Need professionnal page)
+- Medium (Need Influence : 100+ followers...)
+- Twitter (Still waiting)
+- Wordpress

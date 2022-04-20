@@ -1,3 +1,5 @@
+// import AtlassianProvider from "next-auth/providers/atlassian";
+
 import BattleNetProvider from "next-auth/providers/battlenet";
 import DiscordProvider from "next-auth/providers/discord";
 import FacebookProvider from "next-auth/providers/facebook";
@@ -5,15 +7,23 @@ import GitHubProvider from "next-auth/providers/github";
 import GitlabProvider from "next-auth/providers/gitlab";
 import GoogleProvider from "next-auth/providers/google";
 import InstagramProvider from "next-auth/providers/instagram";
+import LinkedInProvider from "next-auth/providers/linkedin";
 import NextAuth from "next-auth";
 import RedditProvider from "next-auth/providers/reddit";
 import SpotifyProvider from "next-auth/providers/spotify";
 import TwitchProvider from "next-auth/providers/twitch";
-import TwitterProvider from "next-auth/providers/twitter";
-import WordpressProvider from "next-auth/providers/wordpress";
+
+// import TwitterProvider from "next-auth/providers/twitter";
+// import WordpressProvider from "next-auth/providers/wordpress";
 
 export default NextAuth({
   providers: [
+    // AtlassianProvider({
+    //   clientId: process.env.ATLASSIAN_CLIENT_ID,
+    //   clientSecret: process.env.ATLASSIAN_CLIENT_SECRET,
+    //   scope:
+    //     "write:jira-work read:jira-work read:jira-user offline_access read:me",
+    // }),
     BattleNetProvider({
       clientId: process.env.BATTLENET_CLIENT_ID,
       clientSecret: process.env.BATTLENET_CLIENT_SECRET,
@@ -43,6 +53,10 @@ export default NextAuth({
       clientId: process.env.INSTAGRAM_CLIENT_ID,
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
     }),
+    LinkedInProvider({
+      clientId: process.env.LINKEDIN_CLIENT_ID,
+      clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
+    }),
     RedditProvider({
       clientId: process.env.REDDIT_CLIENT_ID,
       clientSecret: process.env.REDDIT_CLIENT_SECRET,
@@ -55,13 +69,13 @@ export default NextAuth({
       clientId: process.env.TWITCH_CLIENT_ID,
       clientSecret: process.env.TWITCH_CLIENT_SECRET,
     }),
-    TwitterProvider({
-      clientId: process.env.TWITTER_CLIENT_ID,
-      clientSecret: process.env.TWITTER_CLIENT_SECRET,
-    }),
-    WordpressProvider({
-      clientId: process.env.WORDPRESS_CLIENT_ID,
-      clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-    }),
+    // TwitterProvider({
+    //   clientId: process.env.TWITTER_CLIENT_ID,
+    //   clientSecret: process.env.TWITTER_CLIENT_SECRET,
+    // }),
+    // WordpressProvider({
+    //   clientId: process.env.WORDPRESS_CLIENT_ID,
+    //   clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
+    // }),
   ],
 });
