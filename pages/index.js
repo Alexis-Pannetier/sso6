@@ -57,8 +57,8 @@ export default function Home() {
               Sign in
             </button>
             <p>
-              Cette application récupère seulement le pseudo, adresse email et
-              l'avatar, rien n'est stocké
+              {`Cette application récupère seulement le pseudo, adresse email et
+              l'avatar, rien n'est stocké`}
             </p>
           </>
         )}
