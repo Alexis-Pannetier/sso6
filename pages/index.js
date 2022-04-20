@@ -11,6 +11,7 @@ export default function Home() {
     border: "1px solid white",
   };
 
+  console.log("session", session);
   return (
     <div>
       <Head>
