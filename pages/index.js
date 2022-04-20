@@ -10,7 +10,6 @@ export default function Home() {
     objectFit: "contain",
     border: "1px solid white",
   };
-  console.log("session", session);
 
   return (
     <div>
@@ -57,6 +56,10 @@ export default function Home() {
             <button className="button" onClick={() => signIn()}>
               Sign in
             </button>
+            <p>
+              Cette application récupère seulement le pseudo, adresse email et
+              l'avatar, rien n'est stocké
+            </p>
           </>
         )}
       </main>

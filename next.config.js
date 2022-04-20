@@ -4,9 +4,12 @@ const nextConfig = {
 
   images: {
     domains: [
-      "lh3.googleusercontent.com",
       "cdn.discordapp.com",
+      "lh3.googleusercontent.com",
       "platform-lookaside.fbsbx.com",
+      "scontent-cdt1-1.xx.fbcdn.net",
+      "secure.gravatar.com",
+      "static-cdn.jtvnw.net",
     ],
   },
 };
