@@ -3,11 +3,12 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { playConfetti } from "../component/confettis";
+import { playConfetti } from "../component/Confettis";
 import sausage from "../res/images/sausage.gif";
 
 export default function Home() {
   const { data: session } = useSession();
+
   const sausageImage = {
     objectFit: "contain",
     height: 250,
@@ -16,7 +17,7 @@ export default function Home() {
 
   session && playConfetti();
 
-  console.log("session", session);
+  // console.log("session", session);
 
   return (
     <div className="page">

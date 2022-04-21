@@ -1,5 +1,6 @@
 import "../res/styles/globals.css";
 
+import Cursor from "../component/Cursor";
 import Head from "next/head";
 import { SessionProvider } from "next-auth/react";
 
@@ -39,6 +40,9 @@ export default function App({
           content="https://sso6.herokuapp.com/sausage.gif"
         />
       </Head>
+
+      <Cursor />
+
       <Component {...pageProps} />
     </SessionProvider>
   );
