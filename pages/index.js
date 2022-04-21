@@ -3,6 +3,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { playConfetti } from "../component/confettis";
 import sausage from "../res/images/sausage.gif";
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
     height: 250,
     width: 250,
   };
+
+  session && playConfetti();
 
   console.log("session", session);
 

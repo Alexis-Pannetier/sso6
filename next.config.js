@@ -9,6 +9,7 @@ const nextConfig = {
       "media-exp1.licdn.com",
       "pbs.twimg.com",
       "platform-lookaside.fbsbx.com",
+      "scontent-ams4-1.xx.fbcdn.net",
       "scontent-cdt1-1.xx.fbcdn.net",
       "secure.gravatar.com",
       "static-cdn.jtvnw.net",
