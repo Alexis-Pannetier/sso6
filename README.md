@@ -35,6 +35,7 @@ Working :
 - Reddit
 - Spotify
 - Twitch
+- Twiter
 
 Do not working :
 
@@ -43,7 +44,6 @@ Do not working :
 - Github
 - Linkedin (Need professionnal page)
 - Medium (Need Influence : 100+ followers...)
-- Twitter (Still waiting)
 - Wordpress
 
 ## Troubleshooting
@@ -51,4 +51,5 @@ Do not working :
 ```
 "xxx" is not configured under images in your `next.config.js`
 ```
+
 Add "xxx" inside images/domains list
