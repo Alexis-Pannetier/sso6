@@ -3,7 +3,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { playConfetti } from "../component/Confettis";
+import { playConfetti } from "../component/Confetti";
 import sausage from "../res/images/sausage.gif";
 
 export default function Home() {
@@ -29,9 +29,7 @@ export default function Home() {
 
       <main className="content">
         <div className="header">
-          <Link href="/">
-            <h1>SSO6</h1>
-          </Link>
+          <h1>SSO6</h1>
         </div>
         <div className="row">
           <Image
