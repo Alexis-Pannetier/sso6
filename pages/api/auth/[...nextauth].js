@@ -12,8 +12,8 @@ import NextAuth from "next-auth";
 import RedditProvider from "next-auth/providers/reddit";
 import SpotifyProvider from "next-auth/providers/spotify";
 import TwitchProvider from "next-auth/providers/twitch";
+import TwitterProvider from "next-auth/providers/twitter";
 
-// import TwitterProvider from "next-auth/providers/twitter";
 // import WordpressProvider from "next-auth/providers/wordpress";
 
 export default NextAuth({
@@ -69,10 +69,10 @@ export default NextAuth({
       clientId: process.env.TWITCH_CLIENT_ID,
       clientSecret: process.env.TWITCH_CLIENT_SECRET,
     }),
-    // TwitterProvider({
-    //   clientId: process.env.TWITTER_CLIENT_ID,
-    //   clientSecret: process.env.TWITTER_CLIENT_SECRET,
-    // }),
+    TwitterProvider({
+      clientId: process.env.TWITTER_CLIENT_ID,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET,
+    }),
     // WordpressProvider({
     //   clientId: process.env.WORDPRESS_CLIENT_ID,
     //   clientSecret: process.env.WORDPRESS_CLIENT_SECRET,

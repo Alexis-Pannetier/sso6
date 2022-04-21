@@ -45,3 +45,10 @@ Do not working :
 - Medium (Need Influence : 100+ followers...)
 - Twitter (Still waiting)
 - Wordpress
+
+## Troubleshooting
+
+```
+"xxx" is not configured under images in your `next.config.js`
+```
+Add "xxx" inside images/domains list
