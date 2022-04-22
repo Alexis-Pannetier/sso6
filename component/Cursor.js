@@ -38,16 +38,6 @@ export default function Cursor(props) {
     };
   }, []);
 
-  const toggleCursorVisibility = () => {
-    if (cursorVisible.current) {
-      dot.current.style.opacity = 1;
-      dotOutline.current.style.opacity = 1;
-    } else {
-      dot.current.style.opacity = 0;
-      dotOutline.current.style.opacity = 0;
-    }
-  };
-
   const toggleCursorSize = () => {
     if (cursorEnlarged.current) {
       dot.current.style.transform = "translate(-50%, -50%) scale(0.75)";
@@ -70,17 +60,14 @@ export default function Cursor(props) {
 
   const mouseEnterEvent = () => {
     cursorVisible.current = true;
-    toggleCursorVisibility();
   };
 
   const mouseLeaveEvent = () => {
     cursorVisible.current = false;
-    toggleCursorVisibility();
   };
 
   const mouseMoveEvent = (e) => {
     cursorVisible.current = true;
-    toggleCursorVisibility();
 
     endX.current = e.pageX;
     endY.current = e.pageY;
