@@ -13,6 +13,7 @@ const nextConfig = {
       "scontent-cdt1-1.xx.fbcdn.net",
       "secure.gravatar.com",
       "static-cdn.jtvnw.net",
+      "media-exp2.licdn.com",
     ],
   },
 };
