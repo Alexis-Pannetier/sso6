@@ -1,13 +1,19 @@
-import { signIn, signOut, useSession } from "next-auth/react";
-
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Logged from "../component/Logged";
+import Unlogged from "../component/Unlogged";
 import { playConfetti } from "../component/Confetti";
 import sausage from "../res/images/sausage.gif";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
-  const { data: session } = useSession();
+  const { status, data: session } = useSession({
+    required: true,
+    onUnauthenticated() {
+      // The user is not authenticated, handle it here.
+    },
+  });
 
   const sausageImage = {
     objectFit: "contain",
@@ -51,43 +57,10 @@ export default function Home() {
             {...sausageImage}
           />
         </div>
-        {session ? (
-          // Connected
-          <>
-            <div className="user-details">
-              {session.user.image && (
-                <div className="user-avatar">
-                  <Image
-                    src={session.user.image}
-                    height={50}
-                    width={50}
-                    objectFit="cover"
-                    alt="photo de profil"
-                  />
-                </div>
-              )}
-              {session.user.name && (
-                <p>
-                  Signed in as <strong>{session.user.name}</strong>
-                </p>
-              )}
-              {session.user.email && <p>{session.user.email}</p>}
-            </div>
-            <button className="button" onClick={() => signOut()}>
-              Sign out
-            </button>
-          </>
+        {session && status === "authenticated" ? (
+          <Logged session={session} />
         ) : (
-          // Disconnected
-          <>
-            <button className="button" onClick={() => signIn()}>
-              <strong>Sign in</strong>
-            </button>
-            <p>
-              {`Cette application affiche seulement le pseudo, adresse email et
-              l'avatar, rien n'est stocké`}
-            </p>
-          </>
+          <Unlogged />
         )}
       </main>
 

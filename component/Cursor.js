@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 export default function Cursor(props) {
-  const delay = 18;
+  const delay = 8;
 
   const dot = useRef(null);
   const dotOutline = useRef(null);
